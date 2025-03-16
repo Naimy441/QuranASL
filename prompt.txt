@@ -1,0 +1,48 @@
+PROMPT: Accurate ASL Translation of Quranic Verses
+
+TASK: Translate the following Quranic verse(s) into American Sign Language (ASL) gloss notation that would be suitable for accurate signing.
+
+INPUT FORMAT:
+A list of verses from the Quran in English translation.
+
+TRANSLATION REQUIREMENTS:
+1. GRAMMAR: Follow ASL grammar structure (Topic-Comment or Subject-Object-Verb), not English structure
+2. OMIT FUNCTION WORDS: Remove English articles, prepositions, and other function words that don't exist in ASL
+3. RELIGIOUS CONTEXT: Preserve the spiritual significance and theological implications
+4. CONCEPTUAL ACCURACY: Focus on meaning rather than literal word-for-word translation
+5. ASL DISCOURSE: Use topic establishment and rhetorical question structure when appropriate
+6. TIME INDICATORS: Place time references at the beginning of phrases
+7. CLASSIFIERS: Incorporate appropriate ASL classifiers for objects, movements, or concepts
+8. REPETITIONS: Repeat the sign in the list when conveying emphasis
+
+The GLOSS field should ONLY contain the sequence of ASL signs in capital letters. 
+DO NOT include non-manual features, classifiers, or directional notations in the ASL_GLOSS field.
+These should be described separately in the NON_MANUAL_FEATURES and NOTES fields.
+
+Example of CORRECT ASL GLOSS: "TIME, IMPORTANT, HUMANS"
+Example of INCORRECT ASL GLOSS: "TIME [emphatic], CL:1 IMPORTANT [eyebrows raised], HUMANS++"
+
+IMPORTANT: Islamic organizations have developed signs for specific terms. When encountering a concept that matches one of the following terms, use the provided signing gloss:
+ADHAN, ALHAMDULILAH, ALLAH, ALLAHUAKBAR, ARABIC, ASSALAMWAALAYKUM, AYAH, BISMILLAH, DAWAH, DEEN, DUA, DUNYA, FASTING, HADITH, HAJJ, HALAL, HARAM, HELLFIRE, IMAM, INSHAALLAH, ISLAM, JUMMAH, KAABAA, KHUTBAH, MASHALLAH, MASJID, MUHAMMAD, MUSLIM, PARADISE, PRAYER, PROPHET, PROPHET MUHAMMAD, QURAN, RAMADAN, SADAQAH, SHAHADAH, SUBHANALLAH, SURAH, UMMAH, UMRAH, WAALAYAKUMASSALAM, WUDU, ZAKAT
+
+YOUR ONLY OUTPUT SHOULD BE WITH THE FOLLOWING FORMAT FOR EACH VERSE:
+{
+  "VERSE": "[Original verse text]",
+  "GLOSS": "[SIGN1, SIGN2, SIGN3, ...]",
+}
+
+EXAMPLE:
+INPUT: ["By the ˹passage of˺ time!", "Surely humanity is in ˹grave˺ loss"]
+
+OUTPUT:
+{
+  "VERSE": "By the ˹passage of˺ time!",
+  "GLOSS": "TIME, IMPORTANT",
+},
+{
+  "VERSE": "Surely humanity is in ˹grave˺ loss.",
+  "GLOSS": "HUMANS ALL, DEEP LOSS EXPERIENCE",
+}
+
+REQUEST:
+["In the Name of Allah—the Most Compassionate, Most Merciful.", "All praise is for Allah—Lord of all worlds,", "the Most Compassionate, Most Merciful,", "Master of the Day of Judgment.", "You ˹alone˺ we worship and You ˹alone˺ we ask for help.", "Guide us along the Straight Path,", "the Path of those You have blessed—not those You are displeased with, or those who are astray."]
