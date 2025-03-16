@@ -1,12 +1,7 @@
 {
     "1": {
-        "Bismillah": [
-            "islam_vids/bismillah.mov"
-        ]
-    },
-    "2": {
-        "Alhamdulilah": [
-            "islam_vids/alhamdulilah.mov"
+        "Fatihah": [
+            "islam_vids/surah_fatihah.mp4"
         ]
     }
 }

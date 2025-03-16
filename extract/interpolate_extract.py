@@ -233,7 +233,7 @@ def process_videos_from_json(json_file, output_folder="outputs", transition_fram
     blend_video_segments(landmarks_data_list, output_video_file, transition_frames=transition_frames)
 
 def main():
-    json_file = "surah_fatihah_asl.json"
+    json_file = "surah_test.json"
     if not os.path.exists(json_file):
         print(f"JSON file '{json_file}' not found.")
         return
